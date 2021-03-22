@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const port = 5001;
 const mongoose = require('mongoose')
+const cors = require('cors')
 require('dotenv').config()
 
 //Middleware
