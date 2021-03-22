@@ -20,8 +20,10 @@ app.get('/', (req, res) => {
 
 //Connect to Database
 mongoose.connect(
-    process.env.DB_CONNECT,
-    { useNewUrlParser: true, useUnifiedTopology: true },
+    process.env.DB_CONNECT, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true
+    },
     () => console.log("Connected to the Database")
 )
 
