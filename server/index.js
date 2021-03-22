@@ -4,6 +4,10 @@ const port = 5001;
 const mongoose = require('mongoose')
 require('dotenv').config()
 
+//Middleware
+app.use(cors())
+app.use(express.json())
+
 //Import posts routes
 const postsRoute = require('./routes/posts')
 app.use('/api', postsRoute)
