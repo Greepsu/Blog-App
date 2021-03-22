@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router();
 const Post = require('../models/Post')
 
-
+//Get all message
 router.get('/', async (req, res) => {
     try {
         const post = await Post.find()
@@ -13,6 +13,7 @@ router.get('/', async (req, res) => {
     }
 })
 
+//Post a new message
 router.post('/', async (req, res) => {
     const post = new Post({
         author: req.body.author,
