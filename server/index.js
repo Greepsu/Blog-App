@@ -13,6 +13,11 @@ app.use(express.json())
 const postsRoute = require('./routes/posts')
 app.use('/api', postsRoute)
 
+//Routes
+app.get('/', (req, res) => {
+    res.send("Homepage");
+})
+
 //Connect to Database
 mongoose.connect(
     process.env.DB_CONNECT,
