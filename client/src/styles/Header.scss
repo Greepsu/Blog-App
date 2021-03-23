@@ -1,0 +1,16 @@
+@import './mixin';
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 60px;
+
+    .page-name span {
+        font-size: 45px;
+    }
+
+    .login-name span {
+        font-size: 24px;
+    }
+}

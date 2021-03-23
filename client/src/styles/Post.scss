@@ -1,0 +1,20 @@
+@import './mixin';
+
+.post {
+    @include borderTest(red);
+}
+
+.post-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.user-img img {
+    border-radius: 50%;
+    width: 60px;
+}
+
+.user-post {
+    display: flex;
+    flex-direction: column;
+}

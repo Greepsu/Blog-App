@@ -1,11 +1,15 @@
 import React from 'react'
+import '../styles/Feed.scss'
+import Header from './Header'
+import Post from './Post'
 
-const Feed = () => {
+export default function Feed()  {
     return(
-        <div>
-            <h1>hello</h1>
+        <div className="feed">
+            <div className="feed-container">
+                <Header />
+                <Post />
+            </div>
         </div>
     )
 }
-
-export default Feed

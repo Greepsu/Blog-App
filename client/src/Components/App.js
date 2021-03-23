@@ -1,5 +1,5 @@
-import './App.css';
-import Feed from './Components/Feed';
+import '../styles/App.scss';
+import Feed from './Feed';
 
 function App() {
   return (
