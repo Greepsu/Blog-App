@@ -1,20 +1,37 @@
 @import './mixin';
 
 .post {
-    @include borderTest(red);
+    @include flexCenter();
+    border: 1px solid black;
+    width: 100%;
 }
 
 .post-container {
-    display: flex;
+    @include flexCenter();
     flex-direction: row;
+    padding: 2%;
 }
 
-.user-img img {
-    border-radius: 50%;
-    width: 60px;
+.user-img {
+    margin-right: 3%;
+
+    img {
+        border-radius: 50%;
+        width: 60px;
+    }
 }
+
 
 .user-post {
     display: flex;
     flex-direction: column;
+
+    .user-author p {
+        font-weight: 600;
+        font-size: 18px;
+    }
+
+    .user-message {
+        font-size: 16px;
+    }
 }
