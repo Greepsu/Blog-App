@@ -1,0 +1,39 @@
+@import './mixin';
+
+.user-input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    height: 10vh;
+    padding: 0 40px;
+    margin-top: -20%;
+    margin-bottom: 5%;
+
+    .textarea-input {
+        resize: none;
+        outline: none;
+        border: none;
+        overflow-y: hidden;
+        border-bottom: 1px solid white;
+        width: 70%;
+        padding: 10px 0 10px 10px;
+        font-size: 20px;
+        font-family: 'Lato', sans-serif;
+        background: transparent;
+        
+    }
+
+    button {
+        font-size: 22px;
+        height: 50px;
+        width: 100px;
+        border: none;
+        cursor: pointer;
+        background: rgba(255, 255, 255, 0.096);
+
+        &:hover {
+            background: rgba(255, 255, 255, 0.274);
+        }
+    }
+}

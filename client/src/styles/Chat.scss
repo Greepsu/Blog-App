@@ -1,0 +1,26 @@
+@import './mixin';
+
+.chat {
+    @include borderTest(red);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 60%;
+    height: 80vh;
+    background: rgba(255, 255, 255, 0.164);
+    margin-right: -20%;
+    margin-top: 2%;
+}
+
+.chat-input {
+    display: flex;
+    justify-content: center;
+}
+
+.chat-input-container {
+    @include borderTest(blue);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+}

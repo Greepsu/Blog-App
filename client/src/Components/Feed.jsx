@@ -10,15 +10,15 @@ export default function Feed()  {
     return(
         <div className="feed">
             <div className="feed-container">
-                <Header />
+                <Header pageName="Feed" />
                 <section>
+                    <UserInput />
                     <div className="posts-container">
                         <Post />
                         <Post />
                         <Post />
                         <Post />
                     </div>
-                    <UserInput />
                 </section>
             </div>
         </div>

@@ -14,12 +14,11 @@
 
 section {
     @include flexCenter();
-    @include borderTest(red);
+    flex-direction: column;
     height: 91%;
 }
 
 .posts-container {
-    @include borderTest(blue);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
