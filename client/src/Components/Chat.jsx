@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/Chat.scss";
 
 //import users images
@@ -8,6 +8,12 @@ import kerryPicture from '../assets/users-image/photo-kerry-hebert.jpg'
 import TextareaAutosize from "react-textarea-autosize";
 
 export default function Chat() {
+  const [input, setInput] = useState()
+  console.log(input)
+
+  const sendMessage = (input) => {
+    
+  }
   return (
     <div className="chat">
       <div className="chat-conversation">
@@ -30,8 +36,8 @@ export default function Chat() {
       </div>
       <div className="chat-input">
           <div className="chat-input-container">
-            <TextareaAutosize className="chat-input-textarea" placeholder="Enter message here..." />
-            <button>Send !</button>
+            <TextareaAutosize onChange={(e) => setInput(e.target.value)} className="chat-input-textarea" placeholder="Enter message here..." />
+            <button onClick={sendMessage} >Send !</button>
           </div>
       </div>
     </div>

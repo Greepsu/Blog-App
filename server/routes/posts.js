@@ -16,7 +16,6 @@ router.get('/', async (req, res) => {
 //Post a new message
 router.post('/', async (req, res) => {
     const post = new Post({
-        author: req.body.author,
         message: req.body.message
     })
     console.log(req.body)

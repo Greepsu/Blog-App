@@ -4,7 +4,7 @@ import '../styles/Post.scss'
 //import users images
 import jamesPicture from '../assets/users-image/photo-james-helms.jpg'
 
-export default function Post() {
+export default function Post({message}) {
     return (
         <div className="post" >
             <div className="post-container">
@@ -16,7 +16,7 @@ export default function Post() {
                         <p>Author</p>
                     </div>
                     <div className="user-message">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet tellus nisl, eget volutpat urna viverra ut. Proin in ipsum vitae nibh porta dignissim.</p>
+                        <p>{message}</p>
                     </div>
                 </div>
             </div>

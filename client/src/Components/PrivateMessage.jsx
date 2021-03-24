@@ -12,6 +12,7 @@ import kerryPicture from "../assets/users-image/photo-kerry-hebert.jpg";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import { motion } from "framer-motion";
 
+
 export default function PrivateMessage() {
   return (
     <motion.div
@@ -22,7 +23,10 @@ export default function PrivateMessage() {
     >
       <Header pageName="Private message" />
       <Link to="/">
-      <motion.div whileHover={{ scale: 1.2 }} className="arrow-left"></motion.div>
+        <motion.div
+          whileHover={{ scale: 1.2 }}
+          className="arrow-left"
+        ></motion.div>
       </Link>
       <section>
         <div className="bubble">
