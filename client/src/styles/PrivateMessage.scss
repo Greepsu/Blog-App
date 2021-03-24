@@ -1,0 +1,56 @@
+@import './mixin';
+
+.private-message {
+    section {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+}
+
+.bubble {
+    position: relative;
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.1);
+        transition: 0.2s ease-in-out;
+    }
+}
+
+.bubble img {
+    border-radius: 100px;
+    width: 70%;
+}
+
+.notif {
+    position: absolute;
+    top: -7px;
+    right: 50px;
+    display: inline-block;
+    background: red;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+    @include flexCenter();
+}
+
+.separator {
+    border-left: 1px solid white;
+    height: 80vh;
+    margin: 0 5% 0 10%;
+}
+
+.arrow-left {
+    position: absolute;
+    left: 2%;
+    top: 45%;
+    width: 0; 
+    height: 0; 
+    border-top: 60px solid transparent;
+    border-bottom: 60px solid transparent; 
+    border-right:60px solid black; 
+  }

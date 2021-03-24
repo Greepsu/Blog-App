@@ -1,26 +1,84 @@
-@import './mixin';
+@import "./mixin";
 
 .chat {
-    @include borderTest(red);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50%;
+  height: 80vh;
+  background: rgba(255, 255, 255, 0.164);
+  margin-right: -20%;
+  margin-top: 2%;
+  padding: 20px;
+}
+
+.chat-conversation {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    width: 60%;
-    height: 80vh;
-    background: rgba(255, 255, 255, 0.164);
-    margin-right: -20%;
-    margin-top: 2%;
+}
+
+.chat-message {
+    display: flex;
+    align-items: center;
+    width: 45%;
+    background: rgba(255, 255, 255, 0.37);
+    padding: 20px;
+
+    img {
+        border-radius: 50%;
+        width: 60px;
+        margin-right: 20px;
+    }
+}
+
+.chat-message.response {
+    display: flex;
+    flex-direction: row-reverse;
+    align-self: flex-end;
+    background: rgba(255, 255, 255, 0.664);
 }
 
 .chat-input {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1%;
 }
 
 .chat-input-container {
-    @include borderTest(blue);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+
+  button {
+    width: 100px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.116);
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    color: white;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.288);
+    }
+  }
+}
+
+.chat-input-textarea {
+  resize: none;
+  outline: none;
+  border: none;
+  overflow-y: hidden;
+  border-bottom: 1px solid white;
+  width: 70%;
+  padding: 10px 0 10px 10px;
+  font-size: 20px;
+  font-family: "Lato", sans-serif;
+  background: transparent;
+  color: white;
+
+  &::placeholder {
+    color: rgb(185, 181, 181);
+  }
 }

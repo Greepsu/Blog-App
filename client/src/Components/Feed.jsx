@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom/cjs/react-router-dom.min'
 import '../styles/Feed.scss'
 
 //Import Components
@@ -21,7 +22,7 @@ export default function Feed()  {
                     </div>
                 </section>
             </div>
-            <div className="arrow-right"></div>
+            <Link className="arrow-right" to="/private-message"></Link>
         </div>
     )
 }
