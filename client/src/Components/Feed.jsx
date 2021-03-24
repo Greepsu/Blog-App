@@ -21,6 +21,7 @@ export default function Feed()  {
                     </div>
                 </section>
             </div>
+            <div className="arrow-right"></div>
         </div>
     )
 }
