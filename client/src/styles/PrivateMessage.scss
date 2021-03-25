@@ -1,6 +1,9 @@
 @import './mixin';
 
 .private-message {
+    background: linear-gradient(to right, #93f9b9, #1d976c);
+    height: 100vh;
+
     section {
         display: flex;
         flex-direction: row;

@@ -1,4 +1,5 @@
 @import './mixin';
+@import './variables';
 
 .user-input {
     display: flex;
@@ -15,7 +16,7 @@
         outline: none;
         border: none;
         overflow-y: hidden;
-        border-bottom: 1px solid white;
+        border-bottom: 1px solid $black;
         width: 70%;
         padding: 10px 0 10px 10px;
         font-size: 20px;

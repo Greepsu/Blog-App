@@ -6,7 +6,6 @@ import TextareaAutosize from 'react-textarea-autosize';
 export default function UserInput() {
 
     const [message, setMessage] = useState()
-    console.log(message)
 
     const postMessage = async () => {
         await fetch('http://localhost:5001/api', {

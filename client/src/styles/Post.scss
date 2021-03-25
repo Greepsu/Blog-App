@@ -1,7 +1,8 @@
 @import './mixin';
 
 .post {
-    @include flexCenter();
+    display: flex;
+    justify-content: flex-start;
     border: 1px solid black;
     width: 100%;
 }
@@ -13,7 +14,7 @@
 }
 
 .user-img {
-    margin-right: 3%;
+    margin-right: 10px;
 
     img {
         border-radius: 50%;

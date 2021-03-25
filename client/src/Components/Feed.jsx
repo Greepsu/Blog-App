@@ -10,25 +10,24 @@ import Post from "./Post";
 import UserInput from "./UserInput";
 
 export default function Feed() {
-    const [feedMessages, setFeedMessages] = useState([]);
+  const [feedMessages, setFeedMessages] = useState([]);
 
-    useEffect(() => {
-        getMessages();
-      }, []);
-
+  useEffect(() => {
+    getMessages();
+  }, []);
 
   const getMessages = async () => {
-      try {
-        await fetch("http://localhost:5001/api", {
-            method: "GET"
-        })
-          .then((res) => res.json())
-          .then((data) => setFeedMessages(data));
-      } catch (error) {
-          console.log(error)
-      }
-
+    try {
+      await fetch("http://localhost:5001/api", {
+        method: "GET",
+      })
+        .then((res) => res.json())
+        .then((data) => setFeedMessages(data));
+    } catch (error) {
+      console.log(error);
+    }
   };
+
 
   return (
     <motion.div
@@ -42,11 +41,9 @@ export default function Feed() {
         <section>
           <UserInput />
           <div className="posts-container">
-            {feedMessages ?
-            feedMessages.map((post) => (
-                <Post key={post.id} message={post.message} />
-            )) : "No post available"
-        }
+            {feedMessages
+              ? feedMessages.map((post) => <Post key={post.id} message={post.message} />)
+              : "No post available"}
           </div>
         </section>
       </div>
