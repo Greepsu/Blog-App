@@ -3,6 +3,7 @@ const app = express();
 const port = 5001;
 const mongoose = require('mongoose')
 const cors = require('cors')
+const io = require("socket.io")(http);
 require('dotenv').config()
 
 //Middleware
