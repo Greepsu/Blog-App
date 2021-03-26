@@ -3,21 +3,45 @@ const app = express();
 const port = 5001;
 const mongoose = require('mongoose')
 const cors = require('cors')
-const io = require("socket.io")(http);
 require('dotenv').config()
+
+const server = require('http').Server(app);
+const io = require("socket.io")(server, {
+  cors: {
+    origin: "http://localhost:3000",
+    methods: ["GET", "POST"]
+  }
+});
 
 //Middleware
 app.use(cors())
 app.use(express.json())
+
+
+
+
+//Socket.io
+
+io.on('connection', (socket) => {
+  socket.on('chat message', (msg) => {
+    io.emit('chat message', msg);
+  });
+});
+
+server.listen(5001, () => {
+  console.log(`Server started: socket.io`)
+})
+
+
+
+
 
 //Import posts routes
 const postsRoute = require('./routes/posts')
 app.use('/api', postsRoute)
 
 //Routes
-app.get('/', (req, res) => {
-    res.send("Homepage");
-})
+
 
 //Connect to Database
 mongoose.connect(

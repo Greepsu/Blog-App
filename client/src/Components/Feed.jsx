@@ -42,7 +42,7 @@ export default function Feed() {
           <UserInput />
           <div className="posts-container">
             {feedMessages
-              ? feedMessages.map((post) => <Post key={post.id} message={post.message} />)
+              ? feedMessages.reverse().map((post) => <Post key={post.id} message={post.message} />)
               : "No post available"}
           </div>
         </section>

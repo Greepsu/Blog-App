@@ -29,11 +29,6 @@ export default function PrivateMessage() {
         ></motion.div>
       </Link>
       <section>
-        <div className="bubble">
-          <img src={kerryPicture} alt="user" />
-          <span className="notif">1</span>
-        </div>
-        <div className="separator"></div>
         <Chat />
       </section>
     </motion.div>
