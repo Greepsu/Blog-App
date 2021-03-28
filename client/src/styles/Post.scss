@@ -3,8 +3,10 @@
 .post {
     display: flex;
     justify-content: flex-start;
+    margin-bottom: 20px;
     border: 1px solid rgb(82, 82, 82);
-    width: 100%;
+    width: 90%;
+    white-space: pre-wrap;
 }
 
 .post-container {
@@ -34,5 +36,7 @@
 
     .user-message {
         font-size: 16px;
+        width: 90%;
+        overflow-wrap: break-word;
     }
 }

@@ -7,7 +7,6 @@ import jamesPicture from "../assets/users-image/photo-james-helms.jpg";
 import kerryPicture from "../assets/users-image/photo-kerry-hebert.jpg";
 
 import TextareaAutosize from "react-textarea-autosize";
-import { useEffect } from "react/cjs/react.development";
 
 export default function Chat() {
   const [input, setInput] = useState();

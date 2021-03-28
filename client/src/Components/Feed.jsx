@@ -3,6 +3,7 @@ import "../styles/Feed.scss";
 
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import { motion } from "framer-motion";
+import { v4 as uuidv4 } from 'uuid';
 
 //Import Components
 import Header from "./Header";
@@ -42,7 +43,7 @@ export default function Feed() {
           <UserInput />
           <div className="posts-container">
             {feedMessages
-              ? feedMessages.reverse().map((post) => <Post key={post.id} message={post.message} />)
+              ? feedMessages.reverse().map((post) => <Post key={uuidv4()} message={post.message} />)
               : "No post available"}
           </div>
         </section>
