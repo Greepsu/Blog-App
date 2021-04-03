@@ -5,9 +5,6 @@ import "../styles/PrivateMessage.scss";
 import Chat from "./Chat";
 import Header from "./Header";
 
-//import users images
-import kerryPicture from "../assets/users-image/photo-kerry-hebert.jpg";
-
 //import Lib
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import { motion } from "framer-motion";

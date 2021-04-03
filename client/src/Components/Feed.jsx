@@ -1,17 +1,21 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import "../styles/Feed.scss";
 
+//import Lib
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import { motion } from "framer-motion";
-import { v4 as uuidv4 } from 'uuid';
+import { v4 as uuidv4 } from "uuid";
 
 //Import Components
 import Header from "./Header";
 import Post from "./Post";
 import UserInput from "./UserInput";
+import { Context } from "./userContext";
 
 export default function Feed() {
-  const [feedMessages, setFeedMessages] = useState([]);
+  const [feedMessages, setFeedMessages] = useState();
+  const [context, setContext] = useContext(Context);
+  const [message, setMessage] = useState();
 
   useEffect(() => {
     getMessages();
@@ -29,6 +33,19 @@ export default function Feed() {
     }
   };
 
+  const postMessage = async () => {
+    await fetch("http://localhost:5001/api", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        author: context.name,
+        authorPic: context.imageUrl,
+        message: message,
+      }),
+    }).then((res) => res.json());
+  };
 
   return (
     <motion.div
@@ -40,10 +57,19 @@ export default function Feed() {
       <div className="feed-container">
         <Header pageName="Feed" />
         <section>
-          <UserInput />
+          <UserInput setMessage={setMessage} postMessage={postMessage} />
           <div className="posts-container">
             {feedMessages
-              ? feedMessages.reverse().map((post) => <Post key={uuidv4()} message={post.message} />)
+              ? feedMessages
+                  .map((post) => (
+                    <Post
+                      key={uuidv4()}
+                      author={post.author}
+                      authorPic={post.authorPic}
+                      message={post.message}
+                    />
+                  ))
+                  .reverse()
               : "No post available"}
           </div>
         </section>

@@ -1,6 +1,14 @@
 const mongoose = require("mongoose");
 
 const PostSchema = mongoose.Schema({
+    author: {
+        type: String,
+        required: true
+    },
+    authorPic: {
+        type: String,
+        required: true
+    },
     message: {
         type: String,
         required: true,

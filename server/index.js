@@ -40,8 +40,6 @@ server.listen(5001, () => {
 const postsRoute = require('./routes/posts')
 app.use('/api', postsRoute)
 
-//Routes
-
 
 //Connect to Database
 mongoose.connect(

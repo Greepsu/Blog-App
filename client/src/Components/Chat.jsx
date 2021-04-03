@@ -1,11 +1,8 @@
 import React, { useState, useRef } from "react";
 import "../styles/Chat.scss";
+
+//import Lib
 import { io } from "socket.io-client";
-
-//import users images
-import jamesPicture from "../assets/users-image/photo-james-helms.jpg";
-import kerryPicture from "../assets/users-image/photo-kerry-hebert.jpg";
-
 import TextareaAutosize from "react-textarea-autosize";
 
 export default function Chat() {

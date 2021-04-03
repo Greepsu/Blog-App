@@ -1,7 +1,8 @@
 import React from 'react'
 import '../styles/Header.scss'
+
+//import Component
 import Login from './Login'
-import Logout from './Logout'
 
 export default function Header({ pageName }) {
     return (
@@ -11,7 +12,6 @@ export default function Header({ pageName }) {
             </div>
             <div className="login-name">
                 <Login />
-                <Logout />
             </div>
         </header>
     )
