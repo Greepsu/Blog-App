@@ -1,7 +1,9 @@
 import React from "react";
 import "../styles/Post.scss";
 
-export default function Post({ author, authorPic, message }) {
+import DeleteButton from './DeleteButton'
+
+export default function Post({ author, authorPic, message, postId, context }) {
   return (
     <div className="post">
       <div className="post-container">
@@ -17,6 +19,7 @@ export default function Post({ author, authorPic, message }) {
           </div>
         </div>
       </div>
+      {context.name === author ? <DeleteButton postId={postId} /> : ""}
     </div>
   );
 }

@@ -1,8 +1,10 @@
 @import './mixin';
+@import './variables';
 
 .post {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 20px;
     border: 1px solid rgb(82, 82, 82);
     width: 90%;
@@ -39,4 +41,41 @@
         width: 90%;
         overflow-wrap: break-word;
     }
+}
+
+.delete-button {
+    background: transparent;
+    border: 0.1px solid $black;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    width: 30px;
+    height: 28px;
+    right: 30px;
+
+    span {
+        font-size: 18px;
+        transition: ease-in-out 0.4s;
+        z-index: 2;
+    }
+}
+
+.delete-button:hover span {
+    color: white;
+}
+
+.delete-button::before {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    content: '';
+    background: $black;
+    width: 0%;
+    height: 100%;
+    z-index: -1;
+    transition: ease 0.4s;
+}
+
+.delete-button:hover::before {
+    width: 100%;
 }

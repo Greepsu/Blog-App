@@ -30,4 +30,15 @@ router.post('/', async (req, res) => {
     }
 })
 
+//Delete a specific post
+router.delete('/:postId', async (req, res) => {
+    const deletePost = await Post.findByIdAndDelete(req.params.postId)
+    try {
+        deletePost
+        res.send("Post deleted successfuly")
+    } catch (error) {
+        res.status(400).send(error)
+    }
+})
+
 module.exports = router

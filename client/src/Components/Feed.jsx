@@ -47,6 +47,8 @@ export default function Feed() {
     }).then((res) => res.json());
   };
 
+
+
   return (
     <motion.div
       initial={{ x: "-40%" }}
@@ -67,6 +69,8 @@ export default function Feed() {
                       author={post.author}
                       authorPic={post.authorPic}
                       message={post.message}
+                      postId={post._id}
+                      context={context}
                     />
                   ))
                   .reverse()

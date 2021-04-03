@@ -16,10 +16,7 @@ header {
         justify-content: space-between;
         width: 200px;
     }
-
 }
-
-
 
 header button {
     padding: 10px 18px;
@@ -27,6 +24,8 @@ header button {
     cursor: pointer;
     position: relative;
     overflow: hidden;
+    border: 0.1px solid $black;
+
 
     span {
         font-size: 18px;
@@ -53,7 +52,6 @@ header button::before {
 
 header button:hover::before {
     width: 100%;
-
 }
 
 
